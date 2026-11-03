@@ -1,0 +1,124 @@
+{
+  "season": "2025/26",
+  "competitions": 44,
+  "players": [
+    {
+      "name": "Ashik",
+      "winner": 2,
+      "runnerUp": 1,
+      "shield": 0
+    },
+    {
+      "name": "Axeno",
+      "winner": 1,
+      "runnerUp": 3,
+      "shield": 0
+    },
+    {
+      "name": "Bitto",
+      "winner": 0,
+      "runnerUp": 2,
+      "shield": 0
+    },
+    {
+      "name": "Dyson",
+      "winner": 8,
+      "runnerUp": 6,
+      "shield": 1
+    },
+    {
+      "name": "Fijo",
+      "winner": 8,
+      "runnerUp": 4,
+      "shield": 0
+    },
+    {
+      "name": "Frido",
+      "winner": 2,
+      "runnerUp": 5,
+      "shield": 0
+    },
+    {
+      "name": "Godfray",
+      "winner": 3,
+      "runnerUp": 4,
+      "shield": 1
+    },
+    {
+      "name": "Godwin",
+      "winner": 0,
+      "runnerUp": 1,
+      "shield": 0
+    },
+    {
+      "name": "Hudson",
+      "winner": 4,
+      "runnerUp": 1,
+      "shield": 0
+    },
+    {
+      "name": "Jitto",
+      "winner": 5,
+      "runnerUp": 1,
+      "shield": 0
+    },
+    {
+      "name": "Manu",
+      "winner": 0,
+      "runnerUp": 2,
+      "shield": 0
+    },
+    {
+      "name": "Mejin",
+      "winner": 1,
+      "runnerUp": 1,
+      "shield": 0
+    },
+    {
+      "name": "Samson",
+      "winner": 3,
+      "runnerUp": 0,
+      "shield": 0
+    },
+    {
+      "name": "Shalbin",
+      "winner": 2,
+      "runnerUp": 7,
+      "shield": 0
+    },
+    {
+      "name": "Shanu",
+      "winner": 2,
+      "runnerUp": 0,
+      "shield": 0
+    },
+    {
+      "name": "Stephin",
+      "winner": 0,
+      "runnerUp": 2,
+      "shield": 0
+    },
+    {
+      "name": "Stijo",
+      "winner": 0,
+      "runnerUp": 1,
+      "shield": 0
+    },
+    {
+      "name": "Stineesh",
+      "winner": 1,
+      "runnerUp": 0,
+      "shield": 0
+    },
+    {
+      "name": "Thanush",
+      "winner": 2,
+      "runnerUp": 3,
+      "shield": 0
+    }
+  ],
+  "voting": {
+    "open": true
+  },
+  "votes": []
+}
