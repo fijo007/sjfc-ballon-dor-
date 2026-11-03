@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090909">
+<title>SJFC Ballon d’Or — Trophy Archive</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">SJ</span><span>SJFC <i>BALLON D’OR</i></span></a>
+  <nav><a href="#archive">Trophy archive</a><a href="#about">About</a><button class="admin-link" id="openAdmin">Admin <span>↗</span></button></nav>
+</header>
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="dot"></span> THE OFFICIAL SJFC TROPHY ARCHIVE</p>
+    <h1>Greatness<br>leaves a <em>legacy.</em></h1>
+    <p class="hero-text">Celebrating the players, the moments and the silverware that shape SJFC football.</p>
+    <a class="gold-button" href="#archive">Explore the archive <span>↘</span></a>
+  </div>
+  <div class="hero-art" aria-label="Golden football award illustration">
+    <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+    <div class="award"><div class="award-ball"></div><div class="award-stem"></div><div class="award-base"></div></div>
+    <div class="art-caption"><span>2025 / 26</span><span>SEASON ARCHIVE</span></div>
+  </div>
+  <div class="hero-bottom"><span>EST. SJFC</span><span>FOOTBALL • HONOUR • HISTORY</span><span>01 — 03</span></div>
+</section>
+
+<section class="stats-strip">
+  <div><strong id="playerCount">19</strong><span>PLAYERS IN ARCHIVE</span></div>
+  <div><strong id="competitionCount">44</strong><span>COMPETITIONS RECORDED</span></div>
+  <div><strong id="seasonLabel">2025/26</strong><span>SEASON</span></div>
+</section>
+
+<section class="archive section" id="archive">
+  <div class="section-head">
+    <div><p class="eyebrow">THE RECORD BOOK</p><h2>Trophy <em>archive.</em></h2></div>
+    <p class="section-note">A complete count of SJFC honours.<br>Player names listed alphabetically.</p>
+  </div>
+  <div class="toolbar">
+    <label class="search"><span>⌕</span><input id="search" type="search" placeholder="Search player name..." autocomplete="off"></label>
+    <span class="count-label" id="shownCount">19 PLAYERS</span>
+  </div>
+  <div class="table-wrap">
+    <table><thead><tr><th>PLAYER</th><th><span class="medal gold-medal">◆</span> WINNER</th><th><span class="medal silver-medal">◆</span> RUNNER-UP</th><th><span class="medal bronze-medal">◆</span> SHIELD</th></tr></thead>
+    <tbody id="playerRows"><tr><td colspan="4" class="loading">Loading trophy records…</td></tr></tbody></table>
+  </div>
+  <p class="footnote">COUNTS ONLY — NO RANKING OR POINTS. BASED ON <span id="footCompetitions">44</span> COMPETITIONS.</p>
+</section>
+
+<section class="voting section" id="voting">
+  <div class="section-head">
+    <div><p class="eyebrow">YOUR VOICE. YOUR VOTE.</p><h2>SJFC fan <em>vote.</em></h2></div>
+    <p class="section-note">Free to participate.<br>One vote per username.</p>
+  </div>
+  <div class="vote-panel">
+    <div class="vote-intro"><span class="vote-status" id="voteStatus">VOTING OPEN</span><p>Choose the player you want to support. Enter a username and cast your vote at no cost.</p><small>Use a unique username. Username entry is not identity verification, so this system cannot prevent someone from choosing another person's username.</small></div>
+    <form id="voteForm" class="vote-form">
+      <label>YOUR USERNAME<input id="voterUsername" name="username" required minlength="3" maxlength="24" pattern="[A-Za-z0-9_.-]+" placeholder="e.g. footballfan23"></label>
+      <label>SELECT A PLAYER<select id="votePlayer" name="player" required><option value="">Choose a player</option></select></label>
+      <button class="gold-button full" id="castVote" type="submit">Cast free vote <span>→</span></button>
+      <p class="form-message" id="voteMessage" role="status"></p>
+    </form>
+  </div>
+  <div class="vote-results"><div class="results-heading"><strong>VOTE COUNT</strong><span id="totalVotes">0 VOTES</span></div><div id="voteBars"></div></div>
+</section>
+
+<section class="about section" id="about">
+  <p class="eyebrow">MORE THAN A GAME</p><h2>Every season tells<br>a <em>story.</em></h2>
+  <p>This archive preserves the SJFC tournament honours across the seasons. The numbers represent recorded trophy counts, not a points table or player ranking.</p>
+  <div class="signature">SJFC <span>—</span> THE GAME. THE GLORY. THE LEGACY.</div>
+</section>
+</main>
+<footer><span>© SJFC BALLON D’OR</span><span>MADE FOR THE LOVE OF THE GAME</span><a href="#" id="footerAdmin">ADMIN ACCESS</a></footer>
+
+<div class="modal-backdrop" id="adminModal" hidden>
+ <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <button class="close" id="closeAdmin" aria-label="Close">×</button>
+  <div id="loginView">
+   <p class="eyebrow">RESTRICTED AREA</p><h2 id="modalTitle">Admin <em>access.</em></h2>
+   <p class="muted">Sign in to manage SJFC player records.</p>
+   <form id="loginForm"><label>USERNAME<input name="username" required autocomplete="username"></label><label>PASSWORD<input name="password" type="password" required autocomplete="current-password"></label><button class="gold-button full" type="submit">Secure sign in <span>→</span></button></form>
+   <p class="form-message" id="loginMessage" role="status"></p>
+  </div>
+  <div id="dashboardView" hidden>
+   <p class="eyebrow">CONTROL ROOM</p><h2>Manage <em>records.</em></h2>
+   <div class="settings-grid"><label>SEASON<input id="seasonInput"></label><label>COMPETITIONS<input id="competitionInput" type="number" min="0"></label></div>
+   <div class="admin-voting">
+    <div><strong>PUBLIC VOTING</strong><p class="muted">Anyone can enter a username. Each entered username can vote once.</p></div>
+    <label class="toggle-label"><input type="checkbox" id="votingOpen"> Voting open</label>
+    <div class="vote-admin-summary" id="adminVoteSummary">Loading votes…</div>
+    <button id="resetVotes" class="plain-button" type="button">Reset all votes</button>
+   </div>
+   <div class="admin-toolbar"><strong>PLAYER RECORDS</strong><button id="addPlayer" class="small-button">+ Add player</button></div>
+   <div id="editRows" class="edit-rows"></div>
+   <div class="dashboard-actions"><button id="saveAll" class="gold-button">Save changes <span>✓</span></button><button id="logout" class="plain-button">Sign out</button></div>
+   <p class="form-message" id="saveMessage" role="status"></p>
+  </div>
+ </section>
+</div>
+<script src="/app.js" defer></script>
+</body></html>
